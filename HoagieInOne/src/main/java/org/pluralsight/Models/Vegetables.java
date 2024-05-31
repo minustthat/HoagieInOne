@@ -1,30 +1,34 @@
 package org.pluralsight.Models;
 
+import org.pluralsight.Enums.Veggies;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Vegetables {
-static List<Vegetables> freeToppings = Arrays.asList(
-        new Vegetables("Lettuce"),
-        new Vegetables("Peppers"),
-        new Vegetables("Onions"),
-        new Vegetables("Tomatoes"),
-        new Vegetables("Jalapenos"),
-        new Vegetables("Cucumbers"),
-        new Vegetables("Pickles"),
-        new Vegetables("Guacamole"),
-        new Vegetables("Mushrooms")
-);
+public class Vegetables { ;
 
-    String name;
+    String veggie;
     double price;
 
-    public Vegetables(String name){
-        this.name = name;
-        this.price = price;
+    public String getVeggie() {
+        return veggie;
     }
 
+    public void setVeggie(String veggie) {
+        this.veggie = veggie;
+    }
+
+    public Vegetables(String veggie){
+        this.veggie = veggie;
+        this.price = price;
+        price = 0;
+    }
+
+    @Override
+    public String toString(){
+        return veggie;
+    }
 
 
 }
